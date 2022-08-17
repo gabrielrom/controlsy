@@ -16,9 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
         
         guard let window = window else { return }
-
         
-        window.rootViewController = ViewController()
+        window.rootViewController = OnBoardingViewController()
         window.makeKeyAndVisible()
     }
 
