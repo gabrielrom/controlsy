@@ -24,6 +24,8 @@
 		C7B111DF28AD91030063B6EA /* GreetingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B111DE28AD91030063B6EA /* GreetingsViewCell.swift */; };
 		C7B111E228AD9BF30063B6EA /* GreetingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B111E128AD9BF30063B6EA /* GreetingModel.swift */; };
 		C7CEA58228B6337E00378D82 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CEA58128B6337E00378D82 /* OnBoardingViewModel.swift */; };
+		C7FB55B02915803800F4AD1E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55AF2915803800F4AD1E /* MainCoordinator.swift */; };
+		C7FB55B329158ABD00F4AD1E /* Greetings+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55B229158ABD00F4AD1E /* Greetings+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		C7B111DE28AD91030063B6EA /* GreetingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsViewCell.swift; sourceTree = "<group>"; };
 		C7B111E128AD9BF30063B6EA /* GreetingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingModel.swift; sourceTree = "<group>"; };
 		C7CEA58128B6337E00378D82 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
+		C7FB55AF2915803800F4AD1E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		C7FB55B229158ABD00F4AD1E /* Greetings+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Greetings+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		C77FD0F428AC46BC0085AEF7 /* App Sections */ = {
 			isa = PBXGroup;
 			children = (
+				C7FB55AE2915802700F4AD1E /* Coordinator */,
 				C77FD0F528AC46D70085AEF7 /* OnBoarding */,
 				C77FD0F628AC46EE0085AEF7 /* Sessions */,
 				C77FD0F728AC46F60085AEF7 /* Home */,
@@ -102,9 +107,10 @@
 		C77FD0F528AC46D70085AEF7 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				C7B111E028AD9BE40063B6EA /* Model */,
-				C7CEA58028B6336700378D82 /* ViewModel */,
 				C77FD0F828AC55AD0085AEF7 /* View */,
+				C7CEA58028B6336700378D82 /* ViewModel */,
+				C7B111E028AD9BE40063B6EA /* Model */,
+				C7FB55B129158A6F00F4AD1E /* Utils */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -204,6 +210,22 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C7FB55AE2915802700F4AD1E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C7FB55AF2915803800F4AD1E /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C7FB55B129158A6F00F4AD1E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C7FB55B229158ABD00F4AD1E /* Greetings+Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,8 +306,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C78B27F828884543002F527E /* AppDelegate.swift in Sources */,
+				C7FB55B02915803800F4AD1E /* MainCoordinator.swift in Sources */,
 				C7B111DF28AD91030063B6EA /* GreetingsViewCell.swift in Sources */,
 				C78B27FA28884543002F527E /* SceneDelegate.swift in Sources */,
+				C7FB55B329158ABD00F4AD1E /* Greetings+Utils.swift in Sources */,
 				C7CEA58228B6337E00378D82 /* OnBoardingViewModel.swift in Sources */,
 				C7B111E228AD9BF30063B6EA /* GreetingModel.swift in Sources */,
 				C77FD0FA28AC55CD0085AEF7 /* OnBoardingViewController.swift in Sources */,

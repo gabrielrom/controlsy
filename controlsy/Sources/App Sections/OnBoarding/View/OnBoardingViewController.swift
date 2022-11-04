@@ -14,17 +14,7 @@ class OnBoardingViewController: UIViewController {
     @IBOutlet var signUpButton: UIButton!
     @IBOutlet var signInButton: UIButton!
     
-    private(set) var greetings: [GreetingModel] = [
-        GreetingModel(greetingImageName: "plan-finances",
-                      greetingTitle: "PLAN YOUR FINANCES",
-                      greetingDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since th"),
-        GreetingModel(greetingImageName: "save-money",
-                      greetingTitle: "CONTROL YOUR SAVINGS",
-                      greetingDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since th"),
-        GreetingModel(greetingImageName: "watch-investments",
-                      greetingTitle: "WATCH YOUR INVESTMENTS",
-                      greetingDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since th")
-    ]
+    private(set) var greetings: [GreetingModel] = GreetingsType.normal.data
     
     override func viewDidLoad() {
         super.viewDidLoad()
