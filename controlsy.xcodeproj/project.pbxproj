@@ -23,6 +23,7 @@
 		C7B111DD28AD90DC0063B6EA /* GreetingsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B111DC28AD90DC0063B6EA /* GreetingsViewCell.xib */; };
 		C7B111DF28AD91030063B6EA /* GreetingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B111DE28AD91030063B6EA /* GreetingsViewCell.swift */; };
 		C7B111E228AD9BF30063B6EA /* GreetingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B111E128AD9BF30063B6EA /* GreetingModel.swift */; };
+		C7CEA58228B6337E00378D82 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CEA58128B6337E00378D82 /* OnBoardingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		C7B111DC28AD90DC0063B6EA /* GreetingsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreetingsViewCell.xib; sourceTree = "<group>"; };
 		C7B111DE28AD91030063B6EA /* GreetingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsViewCell.swift; sourceTree = "<group>"; };
 		C7B111E128AD9BF30063B6EA /* GreetingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingModel.swift; sourceTree = "<group>"; };
+		C7CEA58128B6337E00378D82 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,8 @@
 		C77FD0F528AC46D70085AEF7 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
+				C7B111E028AD9BE40063B6EA /* Model */,
+				C7CEA58028B6336700378D82 /* ViewModel */,
 				C77FD0F828AC55AD0085AEF7 /* View */,
 			);
 			path = OnBoarding;
@@ -122,7 +126,6 @@
 		C77FD0F828AC55AD0085AEF7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C7B111E028AD9BE40063B6EA /* Model */,
 				C7B111DB28AD8E8E0063B6EA /* Cell */,
 				C77FD0F928AC55CD0085AEF7 /* OnBoardingViewController.swift */,
 				C77FD0FB28AC56130085AEF7 /* OnBoardingViewController.xib */,
@@ -191,6 +194,14 @@
 				C7B111E128AD9BF30063B6EA /* GreetingModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C7CEA58028B6336700378D82 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C7CEA58128B6337E00378D82 /* OnBoardingViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +286,7 @@
 				C78B27F828884543002F527E /* AppDelegate.swift in Sources */,
 				C7B111DF28AD91030063B6EA /* GreetingsViewCell.swift in Sources */,
 				C78B27FA28884543002F527E /* SceneDelegate.swift in Sources */,
+				C7CEA58228B6337E00378D82 /* OnBoardingViewModel.swift in Sources */,
 				C7B111E228AD9BF30063B6EA /* GreetingModel.swift in Sources */,
 				C77FD0FA28AC55CD0085AEF7 /* OnBoardingViewController.swift in Sources */,
 			);

@@ -14,7 +14,7 @@ class OnBoardingViewController: UIViewController {
     @IBOutlet var signUpButton: UIButton!
     @IBOutlet var signInButton: UIButton!
     
-    private let greetings: [GreetingModel] = [
+    private(set) var greetings: [GreetingModel] = [
         GreetingModel(greetingImageName: "plan-finances",
                       greetingTitle: "PLAN YOUR FINANCES",
                       greetingDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since th"),
