@@ -26,6 +26,9 @@
 		C7CEA58228B6337E00378D82 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CEA58128B6337E00378D82 /* OnBoardingViewModel.swift */; };
 		C7FB55B02915803800F4AD1E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55AF2915803800F4AD1E /* MainCoordinator.swift */; };
 		C7FB55B329158ABD00F4AD1E /* Greetings+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55B229158ABD00F4AD1E /* Greetings+Utils.swift */; };
+		C7FB55B529159B4800F4AD1E /* ChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55B429159B4800F4AD1E /* ChildCoordinator.swift */; };
+		C7FB55B829159BD100F4AD1E /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55B729159BD100F4AD1E /* OnBoardingCoordinator.swift */; };
+		C7FB55BB29159FEB00F4AD1E /* SessionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55BA29159FEB00F4AD1E /* SessionsCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		C7CEA58128B6337E00378D82 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		C7FB55AF2915803800F4AD1E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		C7FB55B229158ABD00F4AD1E /* Greetings+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Greetings+Utils.swift"; sourceTree = "<group>"; };
+		C7FB55B429159B4800F4AD1E /* ChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCoordinator.swift; sourceTree = "<group>"; };
+		C7FB55B729159BD100F4AD1E /* OnBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinator.swift; sourceTree = "<group>"; };
+		C7FB55BA29159FEB00F4AD1E /* SessionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +113,10 @@
 		C77FD0F528AC46D70085AEF7 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				C77FD0F828AC55AD0085AEF7 /* View */,
-				C7CEA58028B6336700378D82 /* ViewModel */,
-				C7B111E028AD9BE40063B6EA /* Model */,
+				C77FD0F828AC55AD0085AEF7 /* Views */,
+				C7CEA58028B6336700378D82 /* ViewModels */,
+				C7B111E028AD9BE40063B6EA /* Models */,
+				C7FB55B629159BAA00F4AD1E /* Coordinators */,
 				C7FB55B129158A6F00F4AD1E /* Utils */,
 			);
 			path = OnBoarding;
@@ -118,6 +125,7 @@
 		C77FD0F628AC46EE0085AEF7 /* Sessions */ = {
 			isa = PBXGroup;
 			children = (
+				C7FB55B929159FC700F4AD1E /* Coordinators */,
 			);
 			path = Sessions;
 			sourceTree = "<group>";
@@ -129,14 +137,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		C77FD0F828AC55AD0085AEF7 /* View */ = {
+		C77FD0F828AC55AD0085AEF7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				C7B111DB28AD8E8E0063B6EA /* Cell */,
 				C77FD0F928AC55CD0085AEF7 /* OnBoardingViewController.swift */,
 				C77FD0FB28AC56130085AEF7 /* OnBoardingViewController.xib */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C78B27EB28884543002F527E = {
@@ -194,26 +202,27 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		C7B111E028AD9BE40063B6EA /* Model */ = {
+		C7B111E028AD9BE40063B6EA /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				C7B111E128AD9BF30063B6EA /* GreetingModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		C7CEA58028B6336700378D82 /* ViewModel */ = {
+		C7CEA58028B6336700378D82 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				C7CEA58128B6337E00378D82 /* OnBoardingViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		C7FB55AE2915802700F4AD1E /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				C7FB55AF2915803800F4AD1E /* MainCoordinator.swift */,
+				C7FB55B429159B4800F4AD1E /* ChildCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -224,6 +233,22 @@
 				C7FB55B229158ABD00F4AD1E /* Greetings+Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		C7FB55B629159BAA00F4AD1E /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C7FB55B729159BD100F4AD1E /* OnBoardingCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		C7FB55B929159FC700F4AD1E /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C7FB55BA29159FEB00F4AD1E /* SessionsCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,12 +331,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C78B27F828884543002F527E /* AppDelegate.swift in Sources */,
+				C7FB55BB29159FEB00F4AD1E /* SessionsCoordinator.swift in Sources */,
 				C7FB55B02915803800F4AD1E /* MainCoordinator.swift in Sources */,
 				C7B111DF28AD91030063B6EA /* GreetingsViewCell.swift in Sources */,
 				C78B27FA28884543002F527E /* SceneDelegate.swift in Sources */,
 				C7FB55B329158ABD00F4AD1E /* Greetings+Utils.swift in Sources */,
 				C7CEA58228B6337E00378D82 /* OnBoardingViewModel.swift in Sources */,
 				C7B111E228AD9BF30063B6EA /* GreetingModel.swift in Sources */,
+				C7FB55B829159BD100F4AD1E /* OnBoardingCoordinator.swift in Sources */,
+				C7FB55B529159B4800F4AD1E /* ChildCoordinator.swift in Sources */,
 				C77FD0FA28AC55CD0085AEF7 /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

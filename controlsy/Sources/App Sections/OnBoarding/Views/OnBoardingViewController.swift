@@ -27,6 +27,14 @@ class OnBoardingViewController: UIViewController {
         greetingsCollection.dataSource = self
         greetingsCollection.delegate = self
     }
+    
+    @IBAction func signupTap(_ sender: UIButton) {
+        UserDefaults.standard.set("session", forKey: "access_type")
+    }
+    
+    @IBAction func signinTap(_ sender: UIButton) {
+        UserDefaults.standard.set("session", forKey: "access_type")
+    }
 }
 
 // MARK: Collection Data Source
