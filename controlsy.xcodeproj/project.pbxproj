@@ -14,11 +14,24 @@
 		C77FD0EF28AC43D70085AEF7 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C77FD0EE28AC43D70085AEF7 /* Inter-SemiBold.ttf */; };
 		C77FD0F128AC43F40085AEF7 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C77FD0F028AC43F40085AEF7 /* Inter-Bold.ttf */; };
 		C77FD0F328AC44070085AEF7 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C77FD0F228AC44070085AEF7 /* Inter-Black.ttf */; };
+		C77FD0FA28AC55CD0085AEF7 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77FD0F928AC55CD0085AEF7 /* OnBoardingViewController.swift */; };
+		C77FD0FC28AC56130085AEF7 /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C77FD0FB28AC56130085AEF7 /* OnBoardingViewController.xib */; };
 		C78B27F828884543002F527E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B27F728884543002F527E /* AppDelegate.swift */; };
 		C78B27FA28884543002F527E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B27F928884543002F527E /* SceneDelegate.swift */; };
-		C78B27FC28884543002F527E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B27FB28884543002F527E /* ViewController.swift */; };
 		C78B280128884544002F527E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78B280028884544002F527E /* Assets.xcassets */; };
 		C78B280428884544002F527E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78B280228884544002F527E /* LaunchScreen.storyboard */; };
+		C79385F329160E4500E8270D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C79385F229160E4500E8270D /* RxCocoa */; };
+		C79385F529160E4500E8270D /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = C79385F429160E4500E8270D /* RxRelay */; };
+		C79385F729160E4500E8270D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C79385F629160E4500E8270D /* RxSwift */; };
+		C7B111DD28AD90DC0063B6EA /* GreetingsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B111DC28AD90DC0063B6EA /* GreetingsViewCell.xib */; };
+		C7B111DF28AD91030063B6EA /* GreetingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B111DE28AD91030063B6EA /* GreetingsViewCell.swift */; };
+		C7B111E228AD9BF30063B6EA /* GreetingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B111E128AD9BF30063B6EA /* GreetingModel.swift */; };
+		C7CEA58228B6337E00378D82 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CEA58128B6337E00378D82 /* OnBoardingViewModel.swift */; };
+		C7FB55B02915803800F4AD1E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55AF2915803800F4AD1E /* MainCoordinator.swift */; };
+		C7FB55B329158ABD00F4AD1E /* Greetings+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55B229158ABD00F4AD1E /* Greetings+Utils.swift */; };
+		C7FB55B529159B4800F4AD1E /* ChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55B429159B4800F4AD1E /* ChildCoordinator.swift */; };
+		C7FB55B829159BD100F4AD1E /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55B729159BD100F4AD1E /* OnBoardingCoordinator.swift */; };
+		C7FB55BB29159FEB00F4AD1E /* SessionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55BA29159FEB00F4AD1E /* SessionsCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,13 +42,23 @@
 		C77FD0EE28AC43D70085AEF7 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		C77FD0F028AC43F40085AEF7 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		C77FD0F228AC44070085AEF7 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		C77FD0F928AC55CD0085AEF7 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		C77FD0FB28AC56130085AEF7 /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
 		C78B27F428884543002F527E /* controlsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = controlsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78B27F728884543002F527E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C78B27F928884543002F527E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C78B27FB28884543002F527E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C78B280028884544002F527E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C78B280328884544002F527E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C78B280528884544002F527E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7B111DC28AD90DC0063B6EA /* GreetingsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreetingsViewCell.xib; sourceTree = "<group>"; };
+		C7B111DE28AD91030063B6EA /* GreetingsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsViewCell.swift; sourceTree = "<group>"; };
+		C7B111E128AD9BF30063B6EA /* GreetingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingModel.swift; sourceTree = "<group>"; };
+		C7CEA58128B6337E00378D82 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
+		C7FB55AF2915803800F4AD1E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		C7FB55B229158ABD00F4AD1E /* Greetings+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Greetings+Utils.swift"; sourceTree = "<group>"; };
+		C7FB55B429159B4800F4AD1E /* ChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCoordinator.swift; sourceTree = "<group>"; };
+		C7FB55B729159BD100F4AD1E /* OnBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinator.swift; sourceTree = "<group>"; };
+		C7FB55BA29159FEB00F4AD1E /* SessionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C79385F729160E4500E8270D /* RxSwift in Frameworks */,
+				C79385F529160E4500E8270D /* RxRelay in Frameworks */,
+				C79385F329160E4500E8270D /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +105,53 @@
 			path = Inter;
 			sourceTree = "<group>";
 		};
+		C77FD0F428AC46BC0085AEF7 /* App Sections */ = {
+			isa = PBXGroup;
+			children = (
+				C77FD0F528AC46D70085AEF7 /* OnBoarding */,
+				C77FD0F628AC46EE0085AEF7 /* Sessions */,
+				C77FD0F728AC46F60085AEF7 /* Home */,
+			);
+			path = "App Sections";
+			sourceTree = "<group>";
+		};
+		C77FD0F528AC46D70085AEF7 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				C77FD0F828AC55AD0085AEF7 /* Views */,
+				C7CEA58028B6336700378D82 /* ViewModels */,
+				C7B111E028AD9BE40063B6EA /* Models */,
+				C7FB55B629159BAA00F4AD1E /* Coordinators */,
+				C7FB55B129158A6F00F4AD1E /* Utils */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		C77FD0F628AC46EE0085AEF7 /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				C7FB55B929159FC700F4AD1E /* Coordinators */,
+			);
+			path = Sessions;
+			sourceTree = "<group>";
+		};
+		C77FD0F728AC46F60085AEF7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C77FD0F828AC55AD0085AEF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7B111DB28AD8E8E0063B6EA /* Cell */,
+				C77FD0F928AC55CD0085AEF7 /* OnBoardingViewController.swift */,
+				C77FD0FB28AC56130085AEF7 /* OnBoardingViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C78B27EB28884543002F527E = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +171,8 @@
 		C78B27F628884543002F527E /* controlsy */ = {
 			isa = PBXGroup;
 			children = (
-				C78B280B28884829002F527E /* Resources */,
 				C78B280C28884831002F527E /* Sources */,
+				C78B280B28884829002F527E /* Resources */,
 			);
 			path = controlsy;
 			sourceTree = "<group>";
@@ -108,8 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				C77FD0E128AC41F50085AEF7 /* Fonts */,
-				C78B27F728884543002F527E /* AppDelegate.swift */,
-				C78B27F928884543002F527E /* SceneDelegate.swift */,
 				C78B280028884544002F527E /* Assets.xcassets */,
 				C78B280228884544002F527E /* LaunchScreen.storyboard */,
 				C78B280528884544002F527E /* Info.plist */,
@@ -120,9 +191,78 @@
 		C78B280C28884831002F527E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				C78B27FB28884543002F527E /* ViewController.swift */,
+				C78B27F728884543002F527E /* AppDelegate.swift */,
+				C78B27F928884543002F527E /* SceneDelegate.swift */,
+				C79385ED2916050F00E8270D /* Core */,
+				C77FD0F428AC46BC0085AEF7 /* App Sections */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		C79385ED2916050F00E8270D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C7FB55AE2915802700F4AD1E /* Coordinators */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C7B111DB28AD8E8E0063B6EA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C7B111DC28AD90DC0063B6EA /* GreetingsViewCell.xib */,
+				C7B111DE28AD91030063B6EA /* GreetingsViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C7B111E028AD9BE40063B6EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C7B111E128AD9BF30063B6EA /* GreetingModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C7CEA58028B6336700378D82 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C7CEA58128B6337E00378D82 /* OnBoardingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C7FB55AE2915802700F4AD1E /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C7FB55AF2915803800F4AD1E /* MainCoordinator.swift */,
+				C7FB55B429159B4800F4AD1E /* ChildCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		C7FB55B129158A6F00F4AD1E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C7FB55B229158ABD00F4AD1E /* Greetings+Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C7FB55B629159BAA00F4AD1E /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C7FB55B729159BD100F4AD1E /* OnBoardingCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		C7FB55B929159FC700F4AD1E /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C7FB55BA29159FEB00F4AD1E /* SessionsCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +281,11 @@
 			dependencies = (
 			);
 			name = controlsy;
+			packageProductDependencies = (
+				C79385F229160E4500E8270D /* RxCocoa */,
+				C79385F429160E4500E8270D /* RxRelay */,
+				C79385F629160E4500E8270D /* RxSwift */,
+			);
 			productName = controlsy;
 			productReference = C78B27F428884543002F527E /* controlsy.app */;
 			productType = "com.apple.product-type.application";
@@ -169,6 +314,9 @@
 				Base,
 			);
 			mainGroup = C78B27EB28884543002F527E;
+			packageReferences = (
+				C79385F129160E4500E8270D /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = C78B27F528884543002F527E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -183,7 +331,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7B111DD28AD90DC0063B6EA /* GreetingsViewCell.xib in Resources */,
 				C77FD0E628AC42370085AEF7 /* Roboto-Medium.ttf in Resources */,
+				C77FD0FC28AC56130085AEF7 /* OnBoardingViewController.xib in Resources */,
 				C77FD0F328AC44070085AEF7 /* Inter-Black.ttf in Resources */,
 				C78B280428884544002F527E /* LaunchScreen.storyboard in Resources */,
 				C77FD0F128AC43F40085AEF7 /* Inter-Bold.ttf in Resources */,
@@ -202,9 +352,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C78B27FC28884543002F527E /* ViewController.swift in Sources */,
 				C78B27F828884543002F527E /* AppDelegate.swift in Sources */,
+				C7FB55BB29159FEB00F4AD1E /* SessionsCoordinator.swift in Sources */,
+				C7FB55B02915803800F4AD1E /* MainCoordinator.swift in Sources */,
+				C7B111DF28AD91030063B6EA /* GreetingsViewCell.swift in Sources */,
 				C78B27FA28884543002F527E /* SceneDelegate.swift in Sources */,
+				C7FB55B329158ABD00F4AD1E /* Greetings+Utils.swift in Sources */,
+				C7CEA58228B6337E00378D82 /* OnBoardingViewModel.swift in Sources */,
+				C7B111E228AD9BF30063B6EA /* GreetingModel.swift in Sources */,
+				C7FB55B829159BD100F4AD1E /* OnBoardingCoordinator.swift in Sources */,
+				C7FB55B529159B4800F4AD1E /* ChildCoordinator.swift in Sources */,
+				C77FD0FA28AC55CD0085AEF7 /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +506,7 @@
 				INFOPLIST_FILE = controlsy/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -375,6 +534,7 @@
 				INFOPLIST_FILE = controlsy/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -412,6 +572,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C79385F129160E4500E8270D /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C79385F229160E4500E8270D /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C79385F129160E4500E8270D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		C79385F429160E4500E8270D /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C79385F129160E4500E8270D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		C79385F629160E4500E8270D /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C79385F129160E4500E8270D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C78B27EC28884543002F527E /* Project object */;
 }
