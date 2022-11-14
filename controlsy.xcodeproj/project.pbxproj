@@ -20,6 +20,9 @@
 		C78B27FA28884543002F527E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B27F928884543002F527E /* SceneDelegate.swift */; };
 		C78B280128884544002F527E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78B280028884544002F527E /* Assets.xcassets */; };
 		C78B280428884544002F527E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78B280228884544002F527E /* LaunchScreen.storyboard */; };
+		C79385F329160E4500E8270D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C79385F229160E4500E8270D /* RxCocoa */; };
+		C79385F529160E4500E8270D /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = C79385F429160E4500E8270D /* RxRelay */; };
+		C79385F729160E4500E8270D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C79385F629160E4500E8270D /* RxSwift */; };
 		C7B111DD28AD90DC0063B6EA /* GreetingsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7B111DC28AD90DC0063B6EA /* GreetingsViewCell.xib */; };
 		C7B111DF28AD91030063B6EA /* GreetingsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B111DE28AD91030063B6EA /* GreetingsViewCell.swift */; };
 		C7B111E228AD9BF30063B6EA /* GreetingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B111E128AD9BF30063B6EA /* GreetingModel.swift */; };
@@ -63,6 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C79385F729160E4500E8270D /* RxSwift in Frameworks */,
+				C79385F529160E4500E8270D /* RxRelay in Frameworks */,
+				C79385F329160E4500E8270D /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +108,6 @@
 		C77FD0F428AC46BC0085AEF7 /* App Sections */ = {
 			isa = PBXGroup;
 			children = (
-				C7FB55AE2915802700F4AD1E /* Coordinator */,
 				C77FD0F528AC46D70085AEF7 /* OnBoarding */,
 				C77FD0F628AC46EE0085AEF7 /* Sessions */,
 				C77FD0F728AC46F60085AEF7 /* Home */,
@@ -188,9 +193,18 @@
 			children = (
 				C78B27F728884543002F527E /* AppDelegate.swift */,
 				C78B27F928884543002F527E /* SceneDelegate.swift */,
+				C79385ED2916050F00E8270D /* Core */,
 				C77FD0F428AC46BC0085AEF7 /* App Sections */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		C79385ED2916050F00E8270D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C7FB55AE2915802700F4AD1E /* Coordinators */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		C7B111DB28AD8E8E0063B6EA /* Cell */ = {
@@ -218,13 +232,13 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		C7FB55AE2915802700F4AD1E /* Coordinator */ = {
+		C7FB55AE2915802700F4AD1E /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
 				C7FB55AF2915803800F4AD1E /* MainCoordinator.swift */,
 				C7FB55B429159B4800F4AD1E /* ChildCoordinator.swift */,
 			);
-			path = Coordinator;
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		C7FB55B129158A6F00F4AD1E /* Utils */ = {
@@ -267,6 +281,11 @@
 			dependencies = (
 			);
 			name = controlsy;
+			packageProductDependencies = (
+				C79385F229160E4500E8270D /* RxCocoa */,
+				C79385F429160E4500E8270D /* RxRelay */,
+				C79385F629160E4500E8270D /* RxSwift */,
+			);
 			productName = controlsy;
 			productReference = C78B27F428884543002F527E /* controlsy.app */;
 			productType = "com.apple.product-type.application";
@@ -295,6 +314,9 @@
 				Base,
 			);
 			mainGroup = C78B27EB28884543002F527E;
+			packageReferences = (
+				C79385F129160E4500E8270D /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = C78B27F528884543002F527E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -550,6 +572,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C79385F129160E4500E8270D /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C79385F229160E4500E8270D /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C79385F129160E4500E8270D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		C79385F429160E4500E8270D /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C79385F129160E4500E8270D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		C79385F629160E4500E8270D /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C79385F129160E4500E8270D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C78B27EC28884543002F527E /* Project object */;
 }

@@ -7,16 +7,37 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
 
 class OnBoardingCoordinator: ChildCoordinatorProtocol {
-    var navigation: UINavigationController
+    weak var mainCoordinator: MainCoordinator?
     
-    init(navigation: UINavigationController) {
+    var navigation: UINavigationController
+    var disposeBag: DisposeBag = DisposeBag()
+    
+    init(navigation: UINavigationController, mainCoordinator: MainCoordinator) {
         self.navigation = navigation
+        self.mainCoordinator = mainCoordinator
     }
     
     func start() {
-        let viewController = OnBoardingViewController()
+        let viewModel = OnBoardingViewModel()
+        let viewController = OnBoardingViewController(viewModel: viewModel)
+        
+        viewModel.selectedSteps
+                 .asDriver()
+                 .drive(onNext: { [weak self] step in
+            guard let self = self else { return }
+            
+            switch step {
+            case .didSignIn, .didSignUp:
+                self.mainCoordinator?.handleNavigation(to: .session,
+                                                       navigation: self.navigation)
+            default: return
+            }
+        }).disposed(by: disposeBag)
+        
         self.navigation.pushViewController(viewController, animated: false)
     }
 }

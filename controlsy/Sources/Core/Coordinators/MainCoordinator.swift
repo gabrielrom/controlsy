@@ -11,8 +11,10 @@ import UIKit
 protocol CoordinatorProtocol {
     var childCoordinators: [ChildCoordinatorProtocol] { get }
     var navigation: UINavigationController { get }
+    
     func start() -> UINavigationController
     func addChildCoordinator(with coordinator: ChildCoordinatorProtocol)
+    func handleNavigation(to screen: NavigationType, navigation: UINavigationController)
 }
 
 enum NavigationType {
@@ -28,22 +30,7 @@ class MainCoordinator: CoordinatorProtocol {
     func start() -> UINavigationController {
         let navigationType = getNavigationType()
         navigation.isNavigationBarHidden = true
-        
-        switch navigationType {
-        case .onboarding:
-            let onboardingCoordinator = OnBoardingCoordinator(navigation: self.navigation)
-            addChildCoordinator(with: onboardingCoordinator)
-            onboardingCoordinator.start()
-        
-        case .session:
-            let sessionCoordinator = SessionsCoordinator(navigation: self.navigation)
-            addChildCoordinator(with: sessionCoordinator)
-            sessionCoordinator.start()
-            
-        case .home:
-            print("Home")
-        }
-        
+        handleNavigation(to: navigationType, navigation: navigation)
         return navigation
     }
 }
@@ -54,18 +41,30 @@ extension MainCoordinator {
         let type = UserDefaults.standard.string(forKey: "access_type")
         
         switch type {
-        case "onboarding":
-            return .onboarding
-        case "session":
-            return .session
-        case "home":
-            return .home
-        default:
-            return .onboarding
+        case "onboarding": return .onboarding
+        case "session": return .session
+        case "home": return .home
+        default: return .onboarding
         }
     }
     
     func addChildCoordinator(with coordinator: ChildCoordinatorProtocol) {
         childCoordinators.append(coordinator)
+    }
+    
+    func handleNavigation(to screen: NavigationType, navigation: UINavigationController) {
+        switch screen {
+        case .onboarding:
+            let onboardingCoordinator = OnBoardingCoordinator(navigation: navigation,
+                                                              mainCoordinator: self)
+            addChildCoordinator(with: onboardingCoordinator)
+            onboardingCoordinator.start()
+        case .session:
+            let sessionCoordinator = SessionsCoordinator(navigation: navigation,
+                                                         mainCoordinator: self)
+            addChildCoordinator(with: sessionCoordinator)
+            sessionCoordinator.start()
+        default: return
+        }
     }
 }

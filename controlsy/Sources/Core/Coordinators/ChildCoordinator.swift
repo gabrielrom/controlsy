@@ -10,5 +10,6 @@ import UIKit
 
 protocol ChildCoordinatorProtocol {
     var navigation: UINavigationController { get }
+    var mainCoordinator: MainCoordinator? { get }
     func start()
 }

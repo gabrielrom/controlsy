@@ -15,6 +15,16 @@ class OnBoardingViewController: UIViewController {
     @IBOutlet var signInButton: UIButton!
     
     private(set) var greetings: [GreetingModel] = GreetingsType.normal.data
+    private(set) var viewModel: OnBoardingViewModelProtocol
+    
+    init(viewModel: OnBoardingViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("We don't use storyboard")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +39,11 @@ class OnBoardingViewController: UIViewController {
     }
     
     @IBAction func signupTap(_ sender: UIButton) {
-        UserDefaults.standard.set("session", forKey: "access_type")
+        viewModel.didTapOnSignUp()
     }
     
     @IBAction func signinTap(_ sender: UIButton) {
-        UserDefaults.standard.set("session", forKey: "access_type")
+        viewModel.didTapOnSignIn()
     }
 }
 
