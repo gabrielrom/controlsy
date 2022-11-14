@@ -10,14 +10,16 @@ import UIKit
 
 class SessionsCoordinator: ChildCoordinatorProtocol {
     var navigation: UINavigationController
+    weak var mainCoordinator: MainCoordinator?
     
-    init(navigation: UINavigationController) {
+    init(navigation: UINavigationController, mainCoordinator: MainCoordinator) {
         self.navigation = navigation
+        self.mainCoordinator = mainCoordinator
     }
     
     func start() {
         let viewController = UIViewController()
-        viewController.view.backgroundColor = .red
-        navigation.pushViewController(viewController, animated: false)
+        viewController.view.backgroundColor = .blue
+        navigation.pushViewController(viewController, animated: true)
     }
 }
