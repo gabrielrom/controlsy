@@ -13,15 +13,24 @@ import RxCocoa
 class OnBoardingCoordinator: ChildCoordinatorProtocol {
     weak var mainCoordinator: MainCoordinator?
     
-    var navigation: UINavigationController
-    var disposeBag: DisposeBag = DisposeBag()
+    var uniqueIdentifier: UUID = UUID()
+    var navigation: UINavigationController?
+    var disposeBag: DisposeBag?
+    var selectedStep: BehaviorRelay<Step> = BehaviorRelay<Step>(value: .none)
+    var rootViewController: UIViewController?
     
-    init(navigation: UINavigationController, mainCoordinator: MainCoordinator) {
+    init(navigation: UINavigationController,
+         mainCoordinator: MainCoordinator,
+         disposeBag: DisposeBag) {
         self.navigation = navigation
         self.mainCoordinator = mainCoordinator
+        self.disposeBag = disposeBag
     }
     
     func start() {
+        guard let disposeBag = disposeBag,
+              let navigation = navigation else { return }
+
         let viewModel = OnBoardingViewModel()
         let viewController = OnBoardingViewController(viewModel: viewModel)
         
@@ -33,11 +42,13 @@ class OnBoardingCoordinator: ChildCoordinatorProtocol {
             switch step {
             case .didSignIn, .didSignUp:
                 self.mainCoordinator?.handleNavigation(to: .session,
-                                                       navigation: self.navigation)
+                                                       navigation: navigation)
+                self.selectedStep.accept(.stop)
             default: return
             }
         }).disposed(by: disposeBag)
         
-        self.navigation.pushViewController(viewController, animated: false)
+        rootViewController = viewController
+        navigation.pushViewController(viewController, animated: false)
     }
 }
