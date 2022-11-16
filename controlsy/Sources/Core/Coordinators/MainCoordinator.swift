@@ -33,6 +33,36 @@ class MainCoordinator: CoordinatorProtocol {
         handleNavigation(to: navigationType, navigation: navigation)
         return navigation
     }
+    func handleNavigation(to screen: NavigationType, navigation: UINavigationController) {
+        switch screen {
+        case .onboarding:
+            let onboardingDisposeBag = DisposeBag()
+            var onboardingCoordinator = OnBoardingCoordinator(navigation: navigation,
+                                                              mainCoordinator: self,
+                                                              disposeBag: onboardingDisposeBag)
+            
+            onboardingCoordinator.selectedStep
+                                 .subscribe(onNext: { [weak self] step in
+                guard let self = self else { return }
+                switch step {
+                    case .stop:
+                    onboardingCoordinator.clean()
+                    self.removeChildCoordinator(id: onboardingCoordinator.uniqueIdentifier)
+                    default: return
+                }
+            }).disposed(by: onboardingDisposeBag)
+            
+            addChildCoordinator(with: onboardingCoordinator)
+            onboardingCoordinator.start()
+            
+        case .session:
+            let sessionCoordinator = SessionsCoordinator(navigation: navigation,
+                                                         mainCoordinator: self)
+            addChildCoordinator(with: sessionCoordinator)
+            sessionCoordinator.start()
+        default: return
+        }
+    }
 }
 
 // MARK: Utils
