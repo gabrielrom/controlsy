@@ -7,13 +7,16 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 protocol CoordinatorProtocol {
     var childCoordinators: [ChildCoordinatorProtocol] { get }
     var navigation: UINavigationController { get }
     
     func start() -> UINavigationController
+    func getNavigationType() -> NavigationType
     func addChildCoordinator(with coordinator: ChildCoordinatorProtocol)
+    func removeChildCoordinator(id: UUID)
     func handleNavigation(to screen: NavigationType, navigation: UINavigationController)
 }
 
@@ -28,11 +31,11 @@ class MainCoordinator: CoordinatorProtocol {
     var navigation: UINavigationController = UINavigationController()
     
     func start() -> UINavigationController {
-        let navigationType = getNavigationType()
         navigation.isNavigationBarHidden = true
-        handleNavigation(to: navigationType, navigation: navigation)
+        handleNavigation(to: getNavigationType(), navigation: navigation)
         return navigation
     }
+    
     func handleNavigation(to screen: NavigationType, navigation: UINavigationController) {
         switch screen {
         case .onboarding:
@@ -82,20 +85,6 @@ extension MainCoordinator {
         childCoordinators.append(coordinator)
     }
     
-    func handleNavigation(to screen: NavigationType, navigation: UINavigationController) {
-        switch screen {
-        case .onboarding:
-            let onboardingCoordinator = OnBoardingCoordinator(navigation: navigation,
-                                                              mainCoordinator: self)
-            addChildCoordinator(with: onboardingCoordinator)
-            onboardingCoordinator.start()
-        case .session:
-            let sessionCoordinator = SessionsCoordinator(navigation: navigation,
-                                                         mainCoordinator: self)
-            addChildCoordinator(with: sessionCoordinator)
-            sessionCoordinator.start()
-        default: return
-        }
     func removeChildCoordinator(id: UUID) {
         childCoordinators.removeAll(where: { $0.uniqueIdentifier.uuidString == id.uuidString })
     }
