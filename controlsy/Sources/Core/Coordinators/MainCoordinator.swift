@@ -66,5 +66,7 @@ extension MainCoordinator {
             sessionCoordinator.start()
         default: return
         }
+    func removeChildCoordinator(id: UUID) {
+        childCoordinators.removeAll(where: { $0.uniqueIdentifier.uuidString == id.uuidString })
     }
 }
