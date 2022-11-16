@@ -10,11 +10,6 @@ import UIKit
 import RxRelay
 import RxSwift
 
-enum Step {
-    case stop
-    case none
-}
-
 protocol ChildCoordinatorProtocol {
     var uniqueIdentifier: UUID { get }
     var navigation: UINavigationController? { get set }
@@ -24,17 +19,5 @@ protocol ChildCoordinatorProtocol {
     var disposeBag: DisposeBag? { get set }
     
     func start()
-}
-
-extension ChildCoordinatorProtocol {
-    mutating func clean() {
-        guard let rootViewController = rootViewController else { return }
-
-        rootViewController.removeFromParent()
-
-        self.disposeBag = nil
-        self.navigation = nil
-        self.rootViewController = nil
-        self.mainCoordinator = nil
-    }
+    func cleanCoordinator()
 }

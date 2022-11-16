@@ -51,4 +51,15 @@ class OnBoardingCoordinator: ChildCoordinatorProtocol {
         rootViewController = viewController
         navigation.pushViewController(viewController, animated: false)
     }
+    
+    func cleanCoordinator() {
+        guard let rootViewController = rootViewController else { return }
+
+        rootViewController.removeFromParent()
+
+        self.disposeBag = nil
+        self.navigation = nil
+        self.rootViewController = nil
+        self.mainCoordinator = nil
+    }
 }

@@ -17,6 +17,9 @@
 		C77FD0FA28AC55CD0085AEF7 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77FD0F928AC55CD0085AEF7 /* OnBoardingViewController.swift */; };
 		C77FD0FC28AC56130085AEF7 /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C77FD0FB28AC56130085AEF7 /* OnBoardingViewController.xib */; };
 		C7875D5829249EE800F4ACC4 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7875D5729249EE800F4ACC4 /* CoordinatorProtocol.swift */; };
+		C7875D5B29249FEA00F4ACC4 /* ChildCoordinatorStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7875D5A29249FEA00F4ACC4 /* ChildCoordinatorStep.swift */; };
+		C7875D5D2924A01000F4ACC4 /* NavigationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7875D5C2924A01000F4ACC4 /* NavigationType.swift */; };
+		C7875D5F2924A0B600F4ACC4 /* MainCoordinator+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7875D5E2924A0B600F4ACC4 /* MainCoordinator+Utils.swift */; };
 		C78B27F828884543002F527E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B27F728884543002F527E /* AppDelegate.swift */; };
 		C78B27FA28884543002F527E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B27F928884543002F527E /* SceneDelegate.swift */; };
 		C78B280128884544002F527E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78B280028884544002F527E /* Assets.xcassets */; };
@@ -30,7 +33,7 @@
 		C7CEA58228B6337E00378D82 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CEA58128B6337E00378D82 /* OnBoardingViewModel.swift */; };
 		C7FB55B02915803800F4AD1E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55AF2915803800F4AD1E /* MainCoordinator.swift */; };
 		C7FB55B329158ABD00F4AD1E /* Greetings+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55B229158ABD00F4AD1E /* Greetings+Utils.swift */; };
-		C7FB55B529159B4800F4AD1E /* ChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55B429159B4800F4AD1E /* ChildCoordinator.swift */; };
+		C7FB55B529159B4800F4AD1E /* ChildCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55B429159B4800F4AD1E /* ChildCoordinatorProtocol.swift */; };
 		C7FB55B829159BD100F4AD1E /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55B729159BD100F4AD1E /* OnBoardingCoordinator.swift */; };
 		C7FB55BB29159FEB00F4AD1E /* SessionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB55BA29159FEB00F4AD1E /* SessionsCoordinator.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +49,9 @@
 		C77FD0F928AC55CD0085AEF7 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		C77FD0FB28AC56130085AEF7 /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
 		C7875D5729249EE800F4ACC4 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		C7875D5A29249FEA00F4ACC4 /* ChildCoordinatorStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCoordinatorStep.swift; sourceTree = "<group>"; };
+		C7875D5C2924A01000F4ACC4 /* NavigationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationType.swift; sourceTree = "<group>"; };
+		C7875D5E2924A0B600F4ACC4 /* MainCoordinator+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainCoordinator+Utils.swift"; sourceTree = "<group>"; };
 		C78B27F428884543002F527E /* controlsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = controlsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78B27F728884543002F527E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C78B27F928884543002F527E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +64,7 @@
 		C7CEA58128B6337E00378D82 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
 		C7FB55AF2915803800F4AD1E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		C7FB55B229158ABD00F4AD1E /* Greetings+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Greetings+Utils.swift"; sourceTree = "<group>"; };
-		C7FB55B429159B4800F4AD1E /* ChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCoordinator.swift; sourceTree = "<group>"; };
+		C7FB55B429159B4800F4AD1E /* ChildCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		C7FB55B729159BD100F4AD1E /* OnBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinator.swift; sourceTree = "<group>"; };
 		C7FB55BA29159FEB00F4AD1E /* SessionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,9 +164,19 @@
 			isa = PBXGroup;
 			children = (
 				C7875D5729249EE800F4ACC4 /* CoordinatorProtocol.swift */,
-				C7FB55B429159B4800F4AD1E /* ChildCoordinator.swift */,
+				C7FB55B429159B4800F4AD1E /* ChildCoordinatorProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C7875D5929249F8200F4ACC4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C7875D5A29249FEA00F4ACC4 /* ChildCoordinatorStep.swift */,
+				C7875D5C2924A01000F4ACC4 /* NavigationType.swift */,
+				C7875D5E2924A0B600F4ACC4 /* MainCoordinator+Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		C78B27EB28884543002F527E = {
@@ -246,6 +262,7 @@
 		C7FB55AE2915802700F4AD1E /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				C7875D5929249F8200F4ACC4 /* Utils */,
 				C7875D5629249EC800F4ACC4 /* Protocols */,
 				C7FB55AF2915803800F4AD1E /* MainCoordinator.swift */,
 			);
@@ -368,12 +385,15 @@
 				C7875D5829249EE800F4ACC4 /* CoordinatorProtocol.swift in Sources */,
 				C7FB55B02915803800F4AD1E /* MainCoordinator.swift in Sources */,
 				C7B111DF28AD91030063B6EA /* GreetingsViewCell.swift in Sources */,
+				C7875D5F2924A0B600F4ACC4 /* MainCoordinator+Utils.swift in Sources */,
 				C78B27FA28884543002F527E /* SceneDelegate.swift in Sources */,
+				C7875D5B29249FEA00F4ACC4 /* ChildCoordinatorStep.swift in Sources */,
 				C7FB55B329158ABD00F4AD1E /* Greetings+Utils.swift in Sources */,
 				C7CEA58228B6337E00378D82 /* OnBoardingViewModel.swift in Sources */,
 				C7B111E228AD9BF30063B6EA /* GreetingModel.swift in Sources */,
 				C7FB55B829159BD100F4AD1E /* OnBoardingCoordinator.swift in Sources */,
-				C7FB55B529159B4800F4AD1E /* ChildCoordinator.swift in Sources */,
+				C7875D5D2924A01000F4ACC4 /* NavigationType.swift in Sources */,
+				C7FB55B529159B4800F4AD1E /* ChildCoordinatorProtocol.swift in Sources */,
 				C77FD0FA28AC55CD0085AEF7 /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

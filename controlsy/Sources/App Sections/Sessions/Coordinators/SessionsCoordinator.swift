@@ -32,4 +32,6 @@ class SessionsCoordinator: ChildCoordinatorProtocol {
         viewController.view.backgroundColor = .blue
         navigation.pushViewController(viewController, animated: true)
     }
+    
+    func cleanCoordinator() { }
 }

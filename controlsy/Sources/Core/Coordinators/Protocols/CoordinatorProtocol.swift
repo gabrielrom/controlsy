@@ -15,7 +15,9 @@ protocol CoordinatorProtocol {
     
     func start() -> UINavigationController
     func getNavigationType() -> NavigationType
+    func handleNavigation(to screen: NavigationType, navigation: UINavigationController)
+
     func addChildCoordinator(with coordinator: ChildCoordinatorProtocol)
     func removeChildCoordinator(id: UUID)
-    func handleNavigation(to screen: NavigationType, navigation: UINavigationController)
+    func observeSelectedStep(of childCoordinator: ChildCoordinatorProtocol, with disposeBag: DisposeBag)
 }

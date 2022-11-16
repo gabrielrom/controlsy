@@ -9,13 +9,7 @@ import Foundation
 import UIKit
 import RxSwift
 
-enum NavigationType {
-    case onboarding
-    case session
-    case home
-}
-
-class MainCoordinator: CoordinatorProtocol {
+final class MainCoordinator: CoordinatorProtocol {
     var childCoordinators: [ChildCoordinatorProtocol] = [ChildCoordinatorProtocol]()
     var navigation: UINavigationController = UINavigationController()
     
@@ -29,24 +23,14 @@ class MainCoordinator: CoordinatorProtocol {
         switch screen {
         case .onboarding:
             let onboardingDisposeBag = DisposeBag()
-            var onboardingCoordinator = OnBoardingCoordinator(navigation: navigation,
+            let onboardingCoordinator = OnBoardingCoordinator(navigation: navigation,
                                                               mainCoordinator: self,
                                                               disposeBag: onboardingDisposeBag)
             
-            onboardingCoordinator.selectedStep
-                                 .subscribe(onNext: { [weak self] step in
-                guard let self = self else { return }
-                switch step {
-                    case .stop:
-                    onboardingCoordinator.clean()
-                    self.removeChildCoordinator(id: onboardingCoordinator.uniqueIdentifier)
-                    default: return
-                }
-            }).disposed(by: onboardingDisposeBag)
-            
+            observeSelectedStep(of: onboardingCoordinator, with: onboardingDisposeBag)
             addChildCoordinator(with: onboardingCoordinator)
-            onboardingCoordinator.start()
             
+            onboardingCoordinator.start()
         case .session:
             let sessionCoordinator = SessionsCoordinator(navigation: navigation,
                                                          mainCoordinator: self)
@@ -54,27 +38,5 @@ class MainCoordinator: CoordinatorProtocol {
             sessionCoordinator.start()
         default: return
         }
-    }
-}
-
-// MARK: Utils
-extension MainCoordinator {
-    func getNavigationType() -> NavigationType {
-        let type = UserDefaults.standard.string(forKey: "access_type")
-        
-        switch type {
-        case "onboarding": return .onboarding
-        case "session": return .session
-        case "home": return .home
-        default: return .onboarding
-        }
-    }
-    
-    func addChildCoordinator(with coordinator: ChildCoordinatorProtocol) {
-        childCoordinators.append(coordinator)
-    }
-    
-    func removeChildCoordinator(id: UUID) {
-        childCoordinators.removeAll(where: { $0.uniqueIdentifier.uuidString == id.uuidString })
     }
 }
