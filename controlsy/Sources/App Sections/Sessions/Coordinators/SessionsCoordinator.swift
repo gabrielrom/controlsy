@@ -7,10 +7,18 @@
 
 import Foundation
 import UIKit
+import RxRelay
+import RxSwift
 
 class SessionsCoordinator: ChildCoordinatorProtocol {
-    var navigation: UINavigationController
     weak var mainCoordinator: MainCoordinator?
+    
+    var uniqueIdentifier: UUID = UUID()
+    var navigation: UINavigationController?
+    var rootViewController: UIViewController?
+    
+    var selectedStep: BehaviorRelay<Step> = BehaviorRelay<Step>(value: .none)
+    var disposeBag: DisposeBag?
     
     init(navigation: UINavigationController, mainCoordinator: MainCoordinator) {
         self.navigation = navigation
@@ -18,8 +26,12 @@ class SessionsCoordinator: ChildCoordinatorProtocol {
     }
     
     func start() {
+        guard let navigation = navigation else { return }
+
         let viewController = UIViewController()
         viewController.view.backgroundColor = .blue
         navigation.pushViewController(viewController, animated: true)
     }
+    
+    func cleanCoordinator() { }
 }
